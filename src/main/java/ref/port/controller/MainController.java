@@ -3,6 +3,12 @@ package ref.port.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/*
+ * 
+ * @author choiseongjun
+ * @Story main
+ * @Date 19.08.10
+ */
 @Controller
 public class MainController {
 
@@ -11,3 +17,5 @@ public class MainController {
 		return "Main";
 	}
 }
+
+
