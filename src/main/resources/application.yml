@@ -1,13 +1,14 @@
 spring:
     datasource:
-        url: "secret"
-        username: secret
-        password: secret
+        url: "jdbc:mysql://ndgndg91.synology.me:3307/studyMate?useSSL=false&serverTimezone=UTC"
+        username: yjg
+        password: yjg
     jpa:
         show-sql: true
         hibernate:
             ddl-auto: update
             naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+            
     mvc:
       view:
         prefix: /WEB-INF/jsp/

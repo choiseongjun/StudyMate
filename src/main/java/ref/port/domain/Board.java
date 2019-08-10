@@ -8,11 +8,22 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.Builder;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import ref.port.domain.common.DateAudit;
-
+/*
+ * 
+ * @author choiseongjun
+ * @Story PortFolio Model
+ * @Date 19.08.10
+ */
 @Table(name="tbl_board")
 @Entity
-public class Board extends DateAudit{
+@Data
+public class Board {
 
 	
 	@Id
@@ -31,5 +42,10 @@ public class Board extends DateAudit{
 	@ManyToOne
 	@JoinColumn(name="userno")
 	private User user;
+
+
+
+	
+	
 	
 }

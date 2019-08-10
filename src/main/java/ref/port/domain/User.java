@@ -6,6 +6,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/*
+ * 
+ * @author choiseongjun
+ * @Story User model
+ * @Date 19.08.10
+ */
 @Entity
 @Table(name="user")
 public class User {
