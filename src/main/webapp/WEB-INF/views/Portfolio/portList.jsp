@@ -181,18 +181,16 @@
 
                         <div class="row">
                       <table width="1000">
-						<c:forEach var="listview" items="${listview}" varStatus="status" >	
-										<c:url var="link" value="/Category/board1Read">
-											<c:param name="brdno" value="${listview.brdno}" />
-										</c:url>		
+					<c:forEach var="boardlist" items="${boardlist}">
+											
                             <!-- Single Product -->
                             <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="single-product-wrapper">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="/UploadImage/2019/${listview.REALNAME}" width="250px", height="250px">
+                                        <img src="/UploadImage/2019/${boardlist.brdtitle}" width="250px", height="250px">
                                         <!-- Hover Thumb -->
-                                        <img class="hover-img" src="/UploadImage/2019/${listview.REALNAME}" alt="" >
+                                        <img class="hover-img" src="/UploadImage/2019/${boardlist.brdtitle}" alt="" >
 
                                         <!-- Product Badge -->
                                         <div class="product-badge offer-badge">
@@ -206,9 +204,9 @@
 
                                     <!-- Product Description -->
                                     <div class="product-description">
-                                        <span><a href="${link}"><c:out value="${listview.brdtitle}"/></a></span>
+                                        <span><a href="${link}"><c:out value="${boardlist.brdtitle}"/></a></span>
                                         <a href="single-product-details.html">
-                                            <h6><c:out value="${listview.brdwriter}"/></h6>
+                                            <h6><c:out value="${boardlist.brdtitle}"/></h6>
                                         </a>
                                         <p class="product-price"><span class="old-price">260만원</span>240만원</p>
 

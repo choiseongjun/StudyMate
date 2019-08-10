@@ -1,9 +1,14 @@
 package ref.port.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import ref.port.domain.Board;
+import ref.port.repository.boardRepository;
 
 /*
  * 
@@ -15,9 +20,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/portFolio")
 public class portController {
 
+	@Autowired
+	boardRepository boardrepository;
 	
+//	//포트폴리오 리스트 경로  
+//	@RequestMapping("/portlist")
+//	public String portlist() {
+//		return "Portfolio/portList";
+//	}
+	/*
+	 * @author choiseongjun
+	 * @Story 포트폴리오 리스트화면 조회 
+	 * */ 
 	@RequestMapping("/portlist")
-	public String portlist() {
+	public String getAllportlist(Model model){
+		List<Board> boardlist=boardrepository.findAll();
+		model.addAttribute("boardlist",boardlist);
+		  
 		return "Portfolio/portList";
-	}
+	} 
+	
 }
