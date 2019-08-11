@@ -27,24 +27,24 @@ public class SharePortfolioApplicationTests {
 	@Autowired
 	boardfileRepository boardfilerepo;
 	
-//	@Test
-//	public void contextLoads() {
-//		BoardFile brdfile=new BoardFile();
-//		Board board=new Board();
-//		board.setBrdno(3L);
-//		board.setBrdtitle("Threetesttitle");
-//		board.setBrdmemo("brdmemo");
-//		brdfile.setFilename("Testfilename");
-//		
-//		boardrepo.save(board);
-//		boardfilerepo.save(brdfile);
-//		
-//	}
-	//조회 테스트..
 	@Test
-	public void Select() {
-		List<Board> portlist=boardrepo.findAll();
-		LOG.info(portlist.toString());
+	public void contextLoads() {
+		BoardFile brdfile=new BoardFile();
+		Board board=new Board();
+		board.setBrdno(13L);
+		board.setBrdtitle("@화면테스트  !!!@#!@#!@");
+		board.setBrdmemo("brdmemo");
+		brdfile.setFilename("Testfilename");
+		
+		boardrepo.save(board);
+		boardfilerepo.save(brdfile);
+		
 	}
+//	//조회 테스트..
+//	@Test
+//	public void Select() {
+//		List<Board> portlist=boardrepo.findAll();
+//		LOG.info(portlist.toString());
+//	}
 
 }

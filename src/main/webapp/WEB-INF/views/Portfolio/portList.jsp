@@ -94,7 +94,7 @@
                                 </ul>
                             </div>
                         </div>
-   	<button type="button" id="btnWrite" class="btn btn-success" align="middle" ><a href="board1Form?bgno=<c:out value="${searchVO.bgno}"/>">글쓰기</a></button>
+   	<button type="button" id="btnWrite" class="btn btn-success" align="middle" ><a href="/portFolio/portFormview"/>글쓰기</a></button>
                         <!-- ##### Single Widget ##### -->
                         <div class="widget price mb-50">
                             <!-- Widget Title -->
@@ -202,9 +202,9 @@
                                         </div>
                                     </div>
 
-                                    <!-- Product Description -->
+                                    <!-- Product Description --> 
                                     <div class="product-description">
-                                        <span><a href="${link}"><c:out value="${boardlist.brdtitle}"/></a></span>
+                                        <span><a href="/portFolio/portDetail"/><c:out value="${boardlist.brdtitle}"/> </a></span>
                                         <a href="single-product-details.html">
                                             <h6><c:out value="${boardlist.brdtitle}"/></h6>
                                         </a>

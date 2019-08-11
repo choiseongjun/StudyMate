@@ -1,13 +1,15 @@
 package ref.port.config;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+
 import ref.port.aws.S3Client;
 import ref.port.aws.ThumbnailGenerator;
 
@@ -27,13 +29,13 @@ public class AWSConfig {
             .withRegion(Regions.fromName(region))
             .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey, secretKey)))
             .build();
-    }
+    }   
 
-    @Bean
+    @Bean 
     public S3Client s3Client(AmazonS3 amazonS3) {
-        return new S3Client(amazonS3, url, bucketName);
+       return new S3Client(amazonS3, url, bucketName);
     }
-
+ 
     @Bean
     public ThumbnailGenerator thumbnailGenerator() { return new ThumbnailGenerator(); }
 

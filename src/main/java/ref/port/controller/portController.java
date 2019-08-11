@@ -28,6 +28,16 @@ public class portController {
 //	public String portlist() {
 //		return "Portfolio/portList";
 //	}
+	@RequestMapping("/portFormview")
+	public String portForm() {
+		return "Portfolio/portForm";
+	}
+	@RequestMapping("/portDetail")
+	public String portDetail() {
+		System.out.println("!!@!@!@!@");
+		return "Portfolio/portDetail";
+	}
+	
 	/*
 	 * @author choiseongjun
 	 * @Story 포트폴리오 리스트화면 조회 
