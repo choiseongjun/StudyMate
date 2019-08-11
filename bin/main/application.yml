@@ -1,14 +1,25 @@
 spring:
-    datasource:
-        url: "secret"
-        username: secret
-        password: secret
+  datasource:
+        url: "jdbc:mysql://ndgndg91.synology.me:3307/studyMate?useSSL=false&serverTimezone=UTC"
+        username: yjg
+        password: yjg
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+#cloud:
+#  aws:
+#    region: ap-northeast-1
+#    credentials:
+#      accessKey: AKIAIHZ3QS6LY3SBF7FQ
+#      secretKey: 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
+#  s3:
+#    url: https://s3.ap-northeast-1.amazonaws.com
+#    bucketName: studymaterefer
+
+    
     jpa:
         show-sql: true
         hibernate:
             ddl-auto: update
             naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
-    mvc:
-      view:
-        prefix: /WEB-INF/jsp/
-        suffix: .jsp
