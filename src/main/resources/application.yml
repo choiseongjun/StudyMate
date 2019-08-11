@@ -11,13 +11,13 @@ spring:
 #  aws:
 #    region: ap-northeast-1
 #    credentials:
-#      accessKey: AKIAIHZ3QS6LY3SBF7FQ
-#      secretKey: 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
+#      accessKey: AKIAJFKFB2VA2KUOSWBQ
+#      secretKey: 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
 #  s3:
 #    url: https://s3.ap-northeast-1.amazonaws.com
 #    bucketName: studymaterefer
 
-    
+
     jpa:
         show-sql: true
         hibernate:
