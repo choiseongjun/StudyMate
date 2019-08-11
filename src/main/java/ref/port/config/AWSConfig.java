@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import ref.port.aws.S3Client;
+import ref.port.aws.ThumbnailGenerator;
 
 @Configuration
 public class AWSConfig {
@@ -33,5 +34,7 @@ public class AWSConfig {
         return new S3Client(amazonS3, url, bucketName);
     }
 
+    @Bean
+    public ThumbnailGenerator thumbnailGenerator() { return new ThumbnailGenerator(); }
 
 }
