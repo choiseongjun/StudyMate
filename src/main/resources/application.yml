@@ -6,7 +6,7 @@ spring:
   mvc:
     view:
       prefix: /WEB-INF/views/
-      suffix: .jsp
+      suffix: .jsp 
 cloud:
   aws:
     region: ap-northeast-1
@@ -15,8 +15,7 @@ cloud:
       secretKey: secret
   s3:
     url: secret
-    bucketName: studymaterefer
-
+    bucketName: secret
 
     jpa:
         show-sql: true

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import ref.port.domain.Board;
+import ref.port.domain.board;
 import ref.port.repository.boardRepository;
 
 /*
@@ -47,13 +47,18 @@ public class portController {
 	 * */ 
 	@RequestMapping("portlist")
 	public String getAllportlist(Model model){
-		List<Board> boardlist=boardrepository.findAll();
+		List<board> boardlist=boardrepository.findAll();
 		model.addAttribute("boardlist",boardlist);
 		  
 		return "Portfolio/portList";
 	} 
+	/*
+	 * @author choiseongjun
+	 * @Story 포트폴리오 글쓰기  
+	 * @Date 19-08-11
+	 * */ 
 	@PostMapping("insertBoard")
-	public String insertBoard(@ModelAttribute Board board) {
+	public String insertBoard(@ModelAttribute board board) {
 		System.out.println("Data Test");
 		System.out.println(board);
 		boardrepository.save(board);

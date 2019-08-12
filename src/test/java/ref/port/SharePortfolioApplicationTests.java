@@ -11,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import ref.port.domain.Board;
-import ref.port.domain.BoardFile;
+import ref.port.domain.board;
+import ref.port.domain.boardFile;
 import ref.port.repository.boardRepository;
 import ref.port.repository.boardfileRepository;
 
@@ -29,8 +29,8 @@ public class SharePortfolioApplicationTests {
 	
 	@Test
 	public void contextLoads() {
-		BoardFile brdfile=new BoardFile();
-		Board board=new Board();
+		boardFile brdfile=new boardFile();
+		board board=new board();
 		board.setBrdno(13L);
 		board.setBrdtitle("@화면테스트  !!!@#!@#!@");
 		board.setBrdmemo("brdmemo");

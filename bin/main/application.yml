@@ -1,12 +1,12 @@
 spring:
   datasource:
-        url: "secret"
-        username: secret
-        password: secret
+        url: "jdbc:mysql://ndgndg91.synology.me:3307/studyMate?useSSL=false&serverTimezone=UTC"
+        username: yjg
+        password: yjg
   mvc:
     view:
       prefix: /WEB-INF/views/
-      suffix: .jsp
+      suffix: .jsp 
 cloud:
   aws:
     region: ap-northeast-1
@@ -16,7 +16,6 @@ cloud:
   s3:
     url: https://s3.ap-northeast-1.amazonaws.com
     bucketName: studymaterefer
-
 
     jpa:
         show-sql: true

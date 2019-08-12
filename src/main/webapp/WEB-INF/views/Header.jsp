@@ -68,7 +68,8 @@
                         <ul>
                             
                             <li><a href="/portFolio/portlist">Portfolio List</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="/user/signupView">회원가입 </a></li>
+                            <li><a href="/user/signinView">로그인  </a></li>
                         </ul>
                     </div>
                     <!-- Nav End -->

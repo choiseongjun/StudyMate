@@ -23,7 +23,7 @@ import ref.port.domain.common.DateAudit;
 @Table(name="tbl_board")
 @Entity
 @Data
-public class Board {
+public class board {
 
 	
 	@Id
@@ -41,7 +41,7 @@ public class Board {
 	
 	@ManyToOne
 	@JoinColumn(name="userno")
-	private User user;
+	private user user;
 
 
 

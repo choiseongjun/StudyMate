@@ -21,7 +21,7 @@ import ref.port.domain.common.DateAudit;
 @Entity
 @Table(name="tbl_brd_file")
 @Getter @Setter
-public class BoardFile {
+public class boardFile {
 
 	@Id
 	@GeneratedValue
@@ -36,5 +36,5 @@ public class BoardFile {
 	
 	@ManyToOne
 	@JoinColumn(name="brdno")
-	private Board board;
+	private board board;
 }
