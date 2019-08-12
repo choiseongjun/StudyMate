@@ -1,8 +1,8 @@
 spring:
   datasource:
-        url: "jdbc:mysql://ndgndg91.synology.me:3307/studyMate?useSSL=false&serverTimezone=UTC"
-        username: yjg
-        password: yjg
+        url: "secret"
+        username: secret
+        password: secret
   jpa:
         show-sql: true 
         hibernate:
@@ -16,10 +16,10 @@ cloud:
   aws:
     region: ap-northeast-1
     credentials:
-      accessKey: AKIAJFKFB2VA2KUOSWBQ
-      secretKey: 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
+      accessKey: secret
+      secretKey: secret
   s3:
     url: https://s3.ap-northeast-1.amazonaws.com
-    bucketName: studymaterefer
+    bucketName: secret
 
    
