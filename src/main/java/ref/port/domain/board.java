@@ -23,7 +23,7 @@ import ref.port.domain.common.DateAudit;
 @Table(name="tbl_board")
 @Entity
 @Data
-public class board {
+public class board{
 
 	
 	@Id

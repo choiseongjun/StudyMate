@@ -21,7 +21,7 @@ import ref.port.domain.common.DateAudit;
 @Entity
 @Table(name="tbl_brd_file")
 @Getter @Setter
-public class boardFile {
+public class boardFile{
 
 	@Id
 	@GeneratedValue

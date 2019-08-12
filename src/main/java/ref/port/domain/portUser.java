@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
+import ref.port.domain.common.DateAudit;
 
 /*
  * 
@@ -17,7 +18,7 @@ import lombok.Data;
 @Entity
 @Table(name="user") 
 @Data
-public class portUser {
+public class portUser extends DateAudit{
 
 	@Id
 	@GeneratedValue
