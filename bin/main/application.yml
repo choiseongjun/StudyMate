@@ -1,8 +1,8 @@
 spring:
   datasource:
-        url: "jdbc:mysql://ndgndg91.synology.me:3307/studyMate?useSSL=false&serverTimezone=UTC"
-        username: yjg
-        password: yjg
+        url: "secret"
+        username: secret
+        password: secret
   mvc:
     view:
       prefix: /WEB-INF/views/
