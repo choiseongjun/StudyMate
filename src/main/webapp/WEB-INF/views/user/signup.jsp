@@ -22,16 +22,38 @@
 		margin-left:500px;
 	}
 </style>
+
 <script>
-/* function emailCheck() {
-document.form1.action="${path}/user/signup";
-document.form1.submit();
-alert("회원 가입 완료하였습니다");
-} */
+$(document).ready(function(){
+
+	$("#register_process").click(function(){
+		var portuser = {
+				"userid" : $("#userid").val,
+				"userpwd" : $('#userpwd').val
+		};
+		console.log(userid)
+		$.ajax({
+            type : "post",
+            url : "/user/signup",
+            data : portuser,
+            success : function(data) {
+                
+            },
+            error : function(error) {
+                alert("오류 발생"+ error);
+            }
+        });
+
+
+	})
+	
+});
+
 </script>
+<form name="form1" method="post" onsubmit="emailCheck();" name="duplicate" enctype="multipart/form-data"
+	>
  <div id="container">
-	<form name="form1" id="form1" method="post"  name="duplicate" enctype="multipart/form-data" action="/user/signup">
-  <table width="400" border="0" class="table table-bordered" bordercolor="gray" align="center" >
+  <table id="form1" width="400" border="0" class="table table-bordered" bordercolor="gray" align="center" >
 					<tr height="40">
 						<td width="150"><font face="궁서체">아이디</font><button type="button"  class="btn btn-default" id="checkbtn"  >중복확인</button>
 						</td>
@@ -41,7 +63,7 @@ alert("회원 가입 완료하였습니다");
 					</tr>
 						<tr height="40">
 						<td width="150"><font face="궁서체">패스워드</font></td>
-						<td width="250"><input class="form-control" type="password" name="userpw"  id="userpw"  onkeyup="passwordCheckFunction();" ></td>
+						<td width="250"><input class="form-control" type="password" name="userpwd"  id="userpwd"  onkeyup="passwordCheckFunction();" ></td>
 					</tr>
 					<!-- 	<tr height="40">
 						<td width="150"><font face="궁서체">패스워드확인</font></td>
@@ -62,7 +84,8 @@ alert("회원 가입 완료하였습니다");
 					</tr>
 						<tr height="40">
 						<td colspan="2">	
-						<input type="submit" class="btn btn-primary" id="checkbtn" value="가입하기">
+						<!-- <input type="submit" class="btn btn-primary" id="checkbtn" value="가입하기"> -->
+						<button id="register_process">회원가입</button>
 					</td>
 					</tr>
 					<tr>
@@ -70,7 +93,7 @@ alert("회원 가입 완료하였습니다");
 			</tr>
 						<td style="text-align:left" colspan="3"><h5 style="color:red;" id="passwordCheckMessage"></h5></td>
 				</table>
-  
-</form> 
+  </div>
+ </form>
 </body>
 </html>

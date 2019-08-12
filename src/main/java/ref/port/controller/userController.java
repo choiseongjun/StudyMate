@@ -1,14 +1,16 @@
 package ref.port.controller;
 
+import java.util.logging.Logger;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import ref.port.repository.portuserRepository;
-import java.util.logging.Logger;
+import org.springframework.web.bind.annotation.RequestMethod;
+
 import ref.port.domain.portUser;
+import ref.port.repository.portuserRepository;
 
 
 
@@ -29,10 +31,10 @@ public class userController {
 	public String loginView() {
 		return "user/signin";
 	} 
-	@PostMapping("signup")
+	@RequestMapping(name="signup",method = RequestMethod.POST)
 	public String signup(@ModelAttribute portUser portuser) {
 		System.out.println("routing Test");
-		System.out.println(portuser);
+		System.out.println(portuser); 
 		userrepository.save(portuser);
 		return "redirect:/";
 	}

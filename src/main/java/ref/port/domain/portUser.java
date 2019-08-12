@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 /*
  * 
  * @author choiseongjun
@@ -14,6 +16,7 @@ import javax.persistence.Table;
  */ 
 @Entity
 @Table(name="user") 
+@Data
 public class portUser {
 
 	@Id
