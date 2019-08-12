@@ -39,7 +39,7 @@ public class boardReply {
 	
 	@ManyToOne
 	@JoinColumn(name="userno")
-	private user user;
+	private portUser user;
 	
 	
 }

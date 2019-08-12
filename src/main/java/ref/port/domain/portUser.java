@@ -11,10 +11,10 @@ import javax.persistence.Table;
  * @author choiseongjun
  * @Story User model
  * @Date 19.08.10
- */
+ */ 
 @Entity
-@Table(name="user")
-public class user {
+@Table(name="user") 
+public class portUser {
 
 	@Id
 	@GeneratedValue

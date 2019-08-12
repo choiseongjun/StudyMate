@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="ref.port.domain.user" project="SharePortfolio" 
-    file="/SharePortfolio/src/main/java/ref/port/domain/user.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="ref.port.domain.portUser" project="SharePortfolio" 
+    file="/SharePortfolio/src/main/java/ref/port/domain/portUser.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1793" y="371"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
