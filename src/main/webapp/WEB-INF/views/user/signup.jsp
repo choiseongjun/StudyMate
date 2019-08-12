@@ -24,7 +24,7 @@
 </style>
 
 <script>
-$(document).ready(function(){
+/* $(document).ready(function(){
 
 	$("#register_process").click(function(){
 		var portuser = {
@@ -47,11 +47,10 @@ $(document).ready(function(){
 
 	})
 	
-});
+}); */
 
 </script>
-<form name="form1" method="post" onsubmit="emailCheck();" name="duplicate" enctype="multipart/form-data"
-	>
+<form name="form1" method="post"  name="duplicate" enctype="multipart/form-data" action="/user/signup">
  <div id="container">
   <table id="form1" width="400" border="0" class="table table-bordered" bordercolor="gray" align="center" >
 					<tr height="40">
