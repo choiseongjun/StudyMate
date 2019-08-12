@@ -11,10 +11,10 @@ cloud:
   aws:
     region: ap-northeast-1
     credentials:
-      accessKey: AKIAJFKFB2VA2KUOSWBQ
-      secretKey: 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
+      accessKey: secret
+      secretKey: secret
   s3:
-    url: https://s3.ap-northeast-1.amazonaws.com
+    url: secret
     bucketName: studymaterefer
 
 
