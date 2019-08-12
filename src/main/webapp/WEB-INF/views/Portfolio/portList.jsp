@@ -32,88 +32,7 @@
     <section class="shop_grid_area section-padding-80">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-4 col-lg-3">
-                    <div class="shop_sidebar_area">
-
-                        <!-- ##### Single Widget ##### -->
-                        <div class="widget catagory mb-50">
-                            <!-- Widget Title -->
-                            <h6 class="widget-title mb-30">검색 조건</h6>
-
-                            <!--  Catagories  -->
-                            <div class="catagories-menu">
-                                <ul id="menu-content2" >
-                                    <!-- Single Item -->
-                                    <li data-toggle="collapse" data-target="#clothing">
-                                        <a href="#">언어 검색</a>
-                                        <ul  id="clothing">
-                                            <li><a href="#">Java</a></li>
-                                            <li><a href="#">React</a></li>
-                                            <li><a href="#">Angular</a></li>
-                                            <li><a href="#">Vue </a></li>
-                                            <li><a href="#">C# </a></li>
-                                          <!--   <li><a href="#">Shirts &amp; Blouses</a></li>
-                                            <li><a href="#">Shirts</a></li>
-                                            <li><a href="#">Sweaters &amp; Knits</a></li> -->
-                                        </ul>
-                                    </li>
-                                    <!-- Single Item -->
-                                    <!-- <li data-toggle="collapse" data-target="#shoes" class="collapsed">
-                                        <a href="#">shoes</a>
-                                        <ul class="sub-menu collapse" id="shoes">
-                                            <li><a href="#">All</a></li>
-                                            <li><a href="#">Bodysuits</a></li>
-                                            <li><a href="#">Dresses</a></li>
-                                            <li><a href="#">Hoodies &amp; Sweats</a></li>
-                                            <li><a href="#">Jackets &amp; Coats</a></li>
-                                            <li><a href="#">Jeans</a></li>
-                                            <li><a href="#">Pants &amp; Leggings</a></li>
-                                            <li><a href="#">Rompers &amp; Jumpsuits</a></li>
-                                            <li><a href="#">Shirts &amp; Blouses</a></li>
-                                            <li><a href="#">Shirts</a></li>
-                                            <li><a href="#">Sweaters &amp; Knits</a></li>
-                                        </ul>
-                                    </li> -->
-                                    <!-- Single Item -->
-                                    <!-- <li data-toggle="collapse" data-target="#accessories" class="collapsed">
-                                        <a href="#">튜닝</a>
-                                        <ul class="sub-menu collapse" id="accessories">
-                                            <li><a href="#">All</a></li>
-                                            <li><a href="#">Bodysuits</a></li>
-                                            <li><a href="#">Dresses</a></li>
-                                            <li><a href="#">Hoodies &amp; Sweats</a></li>
-                                            <li><a href="#">Jackets &amp; Coats</a></li>
-                                            <li><a href="#">Jeans</a></li>
-                                            <li><a href="#">Pants &amp; Leggings</a></li>
-                                            <li><a href="#">Rompers &amp; Jumpsuits</a></li>
-                                            <li><a href="#">Shirts &amp; Blouses</a></li>
-                                            <li><a href="#">Shirts</a></li>
-                                            <li><a href="#">Sweaters &amp; Knits</a></li>
-                                        </ul>
-                                    </li> -->
-                                </ul>
-                            </div>
-                        </div>
-   	<button type="button" id="btnWrite" class="btn btn-success" align="middle" ><a href="/portFolio/portFormview"/>글쓰기</a></button>
-                        <!-- ##### Single Widget ##### -->
-                        <div class="widget price mb-50">
-                            <!-- Widget Title -->
-                            <h6 class="widget-title mb-30">Filter by</h6>
-                            <!-- Widget Title 2 -->
-                            <p class="widget-title2 mb-30">가격검색하기</p>
-
-                            <div class="widget-desc">
-                                <div class="slider-range">
-                                    <div data-min="49" data-max="360" data-unit="$" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-value-min="49" data-value-max="360" data-label-result="Range:">
-                                        <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
-                                        <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                                        <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                                    </div>
-                                    <div class="range-price">좋아요순: 0 - 1억</div>
-                                </div>
-                            </div>
-                        </div>
-
+	<%@include file="portNav.jsp" %>
                         <!-- ##### Single Widget ##### -->
           <!--               <div class="widget color mb-50">
                             Widget Title 2
@@ -147,7 +66,7 @@
                                     <li><a href="#">스즈키</a></li>
                                     <li><a href="#">가와사키</a></li>
                                     <li><a href="#">듀가티</a></li>
-                                </ul>
+                                </ul> 
                             </div>
                         </div> -->
                     </div>
@@ -178,53 +97,47 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
-                      <table width="1000">
-					<c:forEach var="boardlist" items="${boardlist}">
-											
-                            <!-- Single Product -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-product-wrapper">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="/UploadImage/2019/${boardlist.brdtitle}" width="250px", height="250px">
-                                        <!-- Hover Thumb -->
-                                        <img class="hover-img" src="/UploadImage/2019/${boardlist.brdtitle}" alt="" >
-
-                                        <!-- Product Badge -->
-                                        <div class="product-badge offer-badge">
-                                            <span>나중에 좋아요할꺼</span>
-                                        </div>
-                                        <!-- Favourite -->
-                                        <div class="product-favourite">
-                                            <a href="#" class="favme fa fa-heart"></a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Product Description --> 
-                                    <div class="product-description">
-                                        <span><a href="/portFolio/portDetail"/><c:out value="${boardlist.brdtitle}"/> </a></span>
-                                        <a href="single-product-details.html">
-                                            <h6><c:out value="${boardlist.brdtitle}"/></h6>
-                                        </a>
-                                        <p class="product-price"><span class="old-price">260만원</span>240만원</p>
-
-                                        <!-- Hover Content -->
-                                        <div class="hover-content">
-                                            <!-- Add to Cart -->
-                                            <div class="add-to-cart-btn">
-                                                <a href="DealBoardDetail.do" class="btn essence-btn">구경하러가기</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
- 						
-
-                        </div>
-                        </c:forEach>
-                       </table>
+	                      <table width="1000">
+							<c:forEach var="boardlist" items="${boardlist}">
+		                            <!-- Single Product -->
+		                            <div class="col-12 col-sm-6 col-lg-4">
+		                                <div class="single-product-wrapper">
+		                                    <!-- Product Image -->
+		                                    <div class="product-img">
+		                                        <img src="/UploadImage/2019/${boardlist}" width="250px", height="250px">
+		                                        <!-- Hover Thumb -->
+		                                        <img class="hover-img" src="/UploadImage/2019/${boardlist.brdno}" alt="" >
+		                                        <!-- Product Badge -->
+		                                        <div class="product-badge offer-badge">
+		                                            <span>나중에 좋아요할꺼${ boardlist.brdtitle}</span>
+		                                        </div>
+		                                        <!-- Favourite -->
+		                                        <div class="product-favourite">
+		                                            <a href="#" class="favme fa fa-heart"></a>
+		                                        </div>
+		                                    </div>
+		                                    <!-- Product Description --> 
+		                                    <div class="product-description">
+		                                        <span><a href="/portFolio/portDetail"/><c:out value="${boardlist.brdtitle}"/> </a></span>
+		                                        <a href="single-product-details.html">
+		                                            <h6><c:out value="${brdlist.brdtitle}"/></h6>
+		                                        </a>
+		                                        <p class="product-price"><span class="old-price"> 작성자 </span>최성준 </p>
+		
+		                                        <!-- Hover Content -->
+		                                        <div class="hover-content">
+		                                            <!-- Add to Cart -->
+		                                            <div class="add-to-cart-btn">
+		                                                <a href="DealBoardDetail.do" class="btn essence-btn">구경하러가기</a>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        </c:forEach>
+	                       </table>
                     </div>
                     <!-- Pagination -->
                     <nav aria-label="navigation">

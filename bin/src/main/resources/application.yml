@@ -1,0 +1,25 @@
+spring:
+  datasource:
+        url: "secret"
+        username: secret
+        password: secret
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+cloud:
+  aws:
+    region: ap-northeast-1
+    credentials:
+      accessKey: AKIAJFKFB2VA2KUOSWBQ
+      secretKey: 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
+  s3:
+    url: https://s3.ap-northeast-1.amazonaws.com
+    bucketName: studymaterefer
+
+
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+            naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
