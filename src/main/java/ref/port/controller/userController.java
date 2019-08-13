@@ -2,7 +2,10 @@ package ref.port.controller;
 
 import java.util.logging.Logger;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import ref.port.controller.exception.BadRequestException;
 import ref.port.domain.portUser;
 import ref.port.repository.portuserRepository;
 
@@ -36,7 +40,11 @@ public class userController {
 		return "user/signin";
 	} 
 	@PostMapping("signin")
-	public String signin() {
+	public String signin(portUser portuser,HttpServletRequest request) {
+		
+		System.out.println(portuser);
+		Object pricipal=SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		
 		return null;
 	}
 	

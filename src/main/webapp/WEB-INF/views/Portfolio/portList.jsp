@@ -105,8 +105,8 @@
 		                                <div class="single-product-wrapper">
 		                                    <!-- Product Image -->
 		                                    <div class="product-img">
-		                                        <img src="/UploadImage/2019/${boardlist}" width="250px", height="250px">
-		                                        <!-- Hover Thumb -->
+		                                        <img src="/UploadImage/2019/${boardlist.brdno}" width="250px", height="250px">
+		                                        <!-- Hover Thumb --> 
 		                                        <img class="hover-img" src="/UploadImage/2019/${boardlist.brdno}" alt="" >
 		                                        <!-- Product Badge -->
 		                                        <div class="product-badge offer-badge">
@@ -119,7 +119,7 @@
 		                                    </div>
 		                                    <!-- Product Description --> 
 		                                    <div class="product-description">
-		                                        <span><a href="/portFolio/portDetail"/><c:out value="${boardlist.brdtitle}"/> </a></span>
+		                                        <span><a href="/portFolio/portDetail/${boardlist.brdno }"/><c:out value="${boardlist.brdtitle}"/> </a></span>
 		                                        <a href="single-product-details.html">
 		                                            <h6><c:out value="${brdlist.brdtitle}"/></h6>
 		                                        </a>

@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import ref.port.domain.common.DateAudit;
 
 /*
@@ -17,9 +19,9 @@ import ref.port.domain.common.DateAudit;
  */ 
 @Entity
 @Table(name="user") 
-@Data
+@Getter @Setter
 public class portUser extends DateAudit{
-
+ 
 	@Id
 	@GeneratedValue
 	@Column(name="userno")
@@ -32,6 +34,6 @@ public class portUser extends DateAudit{
 	private String username;
 	@Column(name="userimg")
 	private String userimg;
-	@Column(name="deleteflag")
+	@Column(name="deleteflag",columnDefinition = "char(1) default 'Y'")
 	private char deleteflag;
 }

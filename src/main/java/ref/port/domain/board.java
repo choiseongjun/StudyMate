@@ -25,7 +25,7 @@ import ref.port.domain.common.DateAudit;
 @Data
 public class board{
 
-	
+	 
 	@Id
 	@GeneratedValue
 	@Column(name="brdno")

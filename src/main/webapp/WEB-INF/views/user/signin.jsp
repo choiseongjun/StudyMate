@@ -13,31 +13,31 @@
 		margin-left:500px;
 	}
 </style>
-<script>
+<!-- <script>
 $(function() {
 	$("#btnLogin").click(function() {
 		var userid = $("#userid").val(); //태그의 value 속성값
-		var passwd = $("#userpwd").val();
+		var userpwd = $("#userpwd").val();
 		if (userid == "") {
 			alert("아이디를 입력하세요.");
 			$("#userid").focus(); //입력 포커스 이동
 			return; //함수 종료
 		}
-		if (passwd == "") {
+		if (userpwd == "") {
 			alert("비밀번호를 입력하세요.");
-			$("#passwd").focus();
+			$("#userpwd").focus();
 			return;
 		}
 		//폼 데이터를 서버로 제출
-		document.form1.action = "member/login_check.do";
+		document.form1.action = "/user/signin";
 		document.form1.submit();
 	});
 });
-</script>
+</script> -->
 <body>
 <center>
-<%@include file="../Header.jsp"%>
-	<form id="form1" method="post">
+<%@include file="../Header.jsp"%>  
+	<form id="form1" method="post" action="/user/signin">
 	<table border="1" width="400px">
 		<tr>
 			<td>아이디</td>
