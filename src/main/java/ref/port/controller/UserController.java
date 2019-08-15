@@ -2,44 +2,45 @@ package ref.port.controller;
 
 import java.util.logging.Logger;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import ref.port.domain.PortUser;
 import ref.port.repository.PortUserRepository;
 
-
-
 @Controller
-@RequestMapping("/user/*")
+@RequestMapping("/user")
 public class UserController {
 
-	private final static Logger LOG = Logger.getGlobal();
+	private final static Logger LOG = Logger.getGlobal(); // TODO : Change Log4j or Slf4j
+
+	private final PortUserRepository userRepository; // TODO : Replace Service
+	private final PasswordEncoder passwordEncoder; // TODO : Replace Service
+
+	public UserController(PortUserRepository userRepository, PasswordEncoder passwordEncoder) {
+		this.userRepository = userRepository;
+		this.passwordEncoder = passwordEncoder;
+	}
 	
-	@Autowired
-	PortUserRepository userrepository;
-	@Autowired
-	private PasswordEncoder passwordEncoder;
-	
-	@GetMapping("signupView")
+	@GetMapping("/signupView")
 	public String signupView() {
 		return "user/signup";
 	} 
-	@GetMapping("signinView")
+
+	@GetMapping("/signinView")
 	public String loginView() {
 		return "user/signin";
-	} 
-	@RequestMapping(name="signup",method = RequestMethod.POST)
-	public String signup(@ModelAttribute PortUser portuser) {
-		System.out.println("routing Test");
-		System.out.println(portuser); 
-		portuser.setUserpwd(passwordEncoder.encode(portuser.getUserpwd()));//비밀번호 암호화 
-		userrepository.save(portuser);
+	}
+
+	@PostMapping("/signup")
+	public String signUp(@ModelAttribute PortUser portUser) {
+		System.out.println("routing Test"); // TODO : REMOVE
+		System.out.println(portUser);  // TODO : REMOVE
+
+		portUser.setUserPwd(passwordEncoder.encode(portUser.getUserPwd()));//비밀번호 암호화
+		userRepository.save(portUser);
+		
 		return "redirect:/";
 	}
 }

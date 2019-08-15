@@ -19,11 +19,12 @@ import ref.port.repository.BoardRepository;
 public class SharePortfolioApplicationTests {
 	private final static Logger LOG = Logger.getGlobal();
 	LocalDate currentDate = LocalDate.now();
+
 	@Autowired
-	BoardRepository boardrepo;
+	BoardRepository boardRepository;
 	
 	@Autowired
-	BoardFileRepository boardfilerepo;
+	BoardFileRepository boardFileRepository;
 	
 //	@Test
 //	public void contextLoads() {
@@ -41,8 +42,8 @@ public class SharePortfolioApplicationTests {
 	//조회 테스트..
 	@Test
 	public void Select() {
-		List<Board> portlist=boardrepo.findAll();
-		LOG.info(portlist.toString());
+		List<Board> portList = boardRepository.findAll();
+		LOG.info(portList.toString());
 	}
 
 }

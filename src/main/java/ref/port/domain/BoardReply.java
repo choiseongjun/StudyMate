@@ -15,21 +15,20 @@ import lombok.Data;
 @Data
 public class BoardReply {
 
-	 
 	@Id
 	@GeneratedValue
 	@Column(name="repno")
-	private long repno;
+	private long repNo;
 	@Column(name="repmemo")
-	private String repmemo;
+	private String repMemo;
 	@Column(name="repparent")
-	private long repparent;
+	private long repParent;
 	@Column(name="repdepth")
-	private long repdepth;
-	@Column(name="reporder")
-	private long reporder;
+	private long repDepth;
+	@Column(name="repOrder")
+	private long repOrder;
 	@Column(name="repdel")
-	private char repdel;
+	private char repDel;
 	
 	@ManyToOne
 	@JoinColumn(name="brdno")

@@ -21,19 +21,18 @@ import lombok.Data;
 @Data
 public class Board {
 
-	
 	@Id
 	@GeneratedValue
 	@Column(name="brdno")
-	private long brdno;//글순서 
+	private long brdNo;//글순서
 	@Column(name="brdtitle")
-	private String brdtitle;
+	private String brdTitle;
 	@Column(name="brdmemo")
-	private String brdmemo;
+	private String brdMemo;
 	@Column(name="heart")
 	private long heart;
 	@Column(name="deleteflag")
-	private char deleteflag;
+	private char deleteFlag;
 	
 	@ManyToOne
 	@JoinColumn(name="userno")

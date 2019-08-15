@@ -11,6 +11,4 @@ public class SharePortfolioApplication {
 		SpringApplication.run(SharePortfolioApplication.class, args);
 	}
 
-	
-	
 }

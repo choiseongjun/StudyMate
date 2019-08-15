@@ -25,13 +25,13 @@ public class BoardFile {
 	@Id
 	@GeneratedValue
 	@Column(name="fileno")
-	private long fileno;
+	private long fileNo;
 	@Column(name="filename")
-	private String filename;
+	private String fileName;
 	@Column(name="realname")
-	private String realname;
+	private String realName;
 	@Column(name="filesize")
-	private String filesize;
+	private String fileSize;
 	
 	@ManyToOne
 	@JoinColumn(name="brdno")

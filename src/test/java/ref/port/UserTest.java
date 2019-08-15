@@ -19,16 +19,12 @@ public class UserTest {
 	private final static Logger LOG = Logger.getGlobal();
 	
 	@Autowired
-	PortUserRepository userrepository;
+	PortUserRepository userRepository;
 	
 	@Test
 	public void selectUser() {
-
+		List<PortUser> portUsers = userRepository.findAll();
 		
-		
-		List<PortUser> puser=userrepository.findAll();
-		
-		LOG.info(puser.toString());
-		
+		LOG.info(portUsers.toString());
 	}
 }
