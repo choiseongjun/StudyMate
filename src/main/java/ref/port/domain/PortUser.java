@@ -17,7 +17,7 @@ import lombok.Data;
 @Entity
 @Table(name="user") 
 @Data
-public class portUser {
+public class PortUser {
 
 	@Id
 	@GeneratedValue

@@ -9,13 +9,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
- 
+
 @Entity 
 @Table(name="tbl_brd_reply")
 @Data
-public class boardReply {
+public class BoardReply {
 
 	 
 	@Id
@@ -35,11 +33,11 @@ public class boardReply {
 	
 	@ManyToOne
 	@JoinColumn(name="brdno")
-	private board board;
+	private Board board;
 	
 	@ManyToOne
 	@JoinColumn(name="userno")
-	private portUser user;
+	private PortUser user;
 	
 	
 }

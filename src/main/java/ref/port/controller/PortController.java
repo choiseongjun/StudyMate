@@ -7,11 +7,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import ref.port.domain.board;
-import ref.port.repository.boardRepository;
+import ref.port.domain.Board;
+import ref.port.repository.BoardRepository;
 
 /*
  * 
@@ -21,10 +20,10 @@ import ref.port.repository.boardRepository;
  */
 @Controller
 @RequestMapping("/portFolio/*")
-public class portController {
+public class PortController {
 
 	@Autowired
-	boardRepository boardrepository;
+	BoardRepository boardrepository;
 	
 //	//포트폴리오 리스트 경로  
 //	@RequestMapping("/portlist")
@@ -47,7 +46,7 @@ public class portController {
 	 * */ 
 	@RequestMapping("portlist")
 	public String getAllportlist(Model model){
-		List<board> boardlist=boardrepository.findAll();
+		List<Board> boardlist=boardrepository.findAll();
 		model.addAttribute("boardlist",boardlist);
 		  
 		return "Portfolio/portList";
@@ -58,7 +57,7 @@ public class portController {
 	 * @Date 19-08-11
 	 * */ 
 	@PostMapping("insertBoard")
-	public String insertBoard(@ModelAttribute board board) {
+	public String insertBoard(@ModelAttribute Board board) {
 		System.out.println("Data Test");
 		System.out.println(board);
 		boardrepository.save(board);

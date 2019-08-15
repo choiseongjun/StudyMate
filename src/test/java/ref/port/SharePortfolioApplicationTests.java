@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import ref.port.domain.board;
-import ref.port.repository.boardRepository;
-import ref.port.repository.boardfileRepository;
+import ref.port.domain.Board;
+import ref.port.repository.BoardFileRepository;
+import ref.port.repository.BoardRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -20,10 +20,10 @@ public class SharePortfolioApplicationTests {
 	private final static Logger LOG = Logger.getGlobal();
 	LocalDate currentDate = LocalDate.now();
 	@Autowired
-	boardRepository boardrepo;
+	BoardRepository boardrepo;
 	
 	@Autowired
-	boardfileRepository boardfilerepo;
+	BoardFileRepository boardfilerepo;
 	
 //	@Test
 //	public void contextLoads() {
@@ -41,7 +41,7 @@ public class SharePortfolioApplicationTests {
 	//조회 테스트..
 	@Test
 	public void Select() {
-		List<board> portlist=boardrepo.findAll();
+		List<Board> portlist=boardrepo.findAll();
 		LOG.info(portlist.toString());
 	}
 

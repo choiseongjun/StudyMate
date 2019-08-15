@@ -10,7 +10,6 @@ import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
-import ref.port.domain.common.DateAudit;
 
 /*
  * 
@@ -21,7 +20,7 @@ import ref.port.domain.common.DateAudit;
 @Entity
 @Table(name="tbl_brd_file")
 @Getter @Setter
-public class boardFile {
+public class BoardFile {
 
 	@Id
 	@GeneratedValue
@@ -36,5 +35,5 @@ public class boardFile {
 	
 	@ManyToOne
 	@JoinColumn(name="brdno")
-	private board board;
+	private Board board;
 }

@@ -8,12 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import ref.port.domain.common.DateAudit;
+
 /*
  * 
  * @author choiseongjun
@@ -23,7 +19,7 @@ import ref.port.domain.common.DateAudit;
 @Table(name="tbl_board")
 @Entity
 @Data
-public class board {
+public class Board {
 
 	
 	@Id
@@ -41,7 +37,7 @@ public class board {
 	
 	@ManyToOne
 	@JoinColumn(name="userno")
-	private portUser user;
+	private PortUser user;
 
 
 

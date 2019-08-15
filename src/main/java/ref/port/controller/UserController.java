@@ -10,19 +10,19 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import ref.port.domain.portUser;
-import ref.port.repository.portuserRepository;
+import ref.port.domain.PortUser;
+import ref.port.repository.PortUserRepository;
 
 
 
 @Controller
 @RequestMapping("/user/*")
-public class userController {
+public class UserController {
 
 	private final static Logger LOG = Logger.getGlobal();
 	
-	@Autowired 
-	portuserRepository userrepository;
+	@Autowired
+	PortUserRepository userrepository;
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	
@@ -35,7 +35,7 @@ public class userController {
 		return "user/signin";
 	} 
 	@RequestMapping(name="signup",method = RequestMethod.POST)
-	public String signup(@ModelAttribute portUser portuser) {
+	public String signup(@ModelAttribute PortUser portuser) {
 		System.out.println("routing Test");
 		System.out.println(portuser); 
 		portuser.setUserpwd(passwordEncoder.encode(portuser.getUserpwd()));//비밀번호 암호화 
