@@ -9,37 +9,34 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
- 
+
 @Entity 
 @Table(name="tbl_brd_reply")
 @Data
-public class boardReply {
+public class BoardReply {
 
-	 
 	@Id
 	@GeneratedValue
 	@Column(name="repno")
-	private long repno;
+	private long repNo;
 	@Column(name="repmemo")
-	private String repmemo;
+	private String repMemo;
 	@Column(name="repparent")
-	private long repparent;
+	private long repParent;
 	@Column(name="repdepth")
-	private long repdepth;
-	@Column(name="reporder")
-	private long reporder;
+	private long repDepth;
+	@Column(name="repOrder")
+	private long repOrder;
 	@Column(name="repdel")
-	private char repdel;
+	private char repDel;
 	
 	@ManyToOne
 	@JoinColumn(name="brdno")
-	private board board;
+	private Board board;
 	
 	@ManyToOne
 	@JoinColumn(name="userno")
-	private portUser user;
+	private PortUser user;
 	
 	
 }

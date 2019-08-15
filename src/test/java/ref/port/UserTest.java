@@ -9,26 +9,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import ref.port.domain.portUser;
-import ref.port.repository.portuserRepository;
+import ref.port.domain.PortUser;
+import ref.port.repository.PortUserRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class userTest {
+public class UserTest {
 
 	private final static Logger LOG = Logger.getGlobal();
 	
 	@Autowired
-	portuserRepository userrepository;
+	PortUserRepository userRepository;
 	
 	@Test
 	public void selectUser() {
-
+		List<PortUser> portUsers = userRepository.findAll();
 		
-		
-		List<portUser> puser=userrepository.findAll();
-		
-		LOG.info(puser.toString());
-		
+		LOG.info(portUsers.toString());
 	}
 }

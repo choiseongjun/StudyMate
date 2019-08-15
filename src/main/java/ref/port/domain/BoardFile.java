@@ -10,7 +10,6 @@ import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
-import ref.port.domain.common.DateAudit;
 
 /*
  * 
@@ -21,20 +20,20 @@ import ref.port.domain.common.DateAudit;
 @Entity
 @Table(name="tbl_brd_file")
 @Getter @Setter
-public class boardFile {
+public class BoardFile {
 
 	@Id
 	@GeneratedValue
 	@Column(name="fileno")
-	private long fileno;
+	private long fileNo;
 	@Column(name="filename")
-	private String filename;
+	private String fileName;
 	@Column(name="realname")
-	private String realname;
+	private String realName;
 	@Column(name="filesize")
-	private String filesize;
+	private String fileSize;
 	
 	@ManyToOne
 	@JoinColumn(name="brdno")
-	private board board;
+	private Board board;
 }

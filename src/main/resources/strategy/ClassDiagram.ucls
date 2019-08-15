@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="ref.port.controller.portController" project="SharePortfolio" 
-    file="/SharePortfolio/src/main/java/ref/port/controller/portController.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="ref.port.controller.PortController" project="SharePortfolio"
+    file="/SharePortfolio/src/main/java/ref/port/controller/PortController.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="1187" y="398"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,8 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="ref.port.controller.userController" project="SharePortfolio" 
-    file="/SharePortfolio/src/main/java/ref/port/controller/userController.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="ref.port.controller.UserController" project="SharePortfolio"
+    file="/SharePortfolio/src/main/java/ref/port/controller/UserController.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="1389" y="370"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="ref.port.domain.portUser" project="SharePortfolio" 
-    file="/SharePortfolio/src/main/java/ref/port/domain/portUser.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="ref.port.domain.PortUser" project="SharePortfolio"
+    file="/SharePortfolio/src/main/java/ref/port/domain/PortUser.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="1793" y="371"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="ref.port.domain.boardFile" project="SharePortfolio" 
-    file="/SharePortfolio/src/main/java/ref/port/domain/boardFile.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="ref.port.domain.BoardFile" project="SharePortfolio"
+    file="/SharePortfolio/src/main/java/ref/port/domain/BoardFile.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="1866" y="1187"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -55,8 +55,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="ref.port.domain.board" project="SharePortfolio" 
-    file="/SharePortfolio/src/main/java/ref/port/domain/board.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="7" language="java" name="ref.port.domain.Board" project="SharePortfolio"
+    file="/SharePortfolio/src/main/java/ref/port/domain/Board.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="1814" y="768"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -64,8 +64,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="8" language="java" name="ref.port.repository.portuserRepository" project="SharePortfolio" 
-    file="/SharePortfolio/src/main/java/ref/port/repository/portuserRepository.java" binary="false" 
+  <interface id="8" language="java" name="ref.port.repository.PortUserRepository" project="SharePortfolio"
+    file="/SharePortfolio/src/main/java/ref/port/repository/PortUserRepository.java" binary="false"
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="989" y="593"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -74,8 +74,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="9" language="java" name="ref.port.repository.boardfileRepository" project="SharePortfolio" 
-    file="/SharePortfolio/src/main/java/ref/port/repository/boardfileRepository.java" binary="false" 
+  <interface id="9" language="java" name="ref.port.repository.BoardFileRepository" project="SharePortfolio"
+    file="/SharePortfolio/src/main/java/ref/port/repository/BoardFileRepository.java" binary="false"
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1364" y="590"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -84,8 +84,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="10" language="java" name="ref.port.repository.boardRepository" project="SharePortfolio" 
-    file="/SharePortfolio/src/main/java/ref/port/repository/boardRepository.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="10" language="java" name="ref.port.repository.BoardRepository" project="SharePortfolio"
+    file="/SharePortfolio/src/main/java/ref/port/repository/BoardRepository.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="1184" y="586"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -129,8 +129,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="ref.port.domain.boardReply" project="SharePortfolio" 
-    file="/SharePortfolio/src/main/java/ref/port/domain/boardReply.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="15" language="java" name="ref.port.domain.BoardReply" project="SharePortfolio"
+    file="/SharePortfolio/src/main/java/ref/port/domain/BoardReply.java" binary="false" corner="BOTTOM_RIGHT">
     <position height="-1" width="-1" x="2185" y="755"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -164,7 +164,7 @@
   </association>  
   <association id="22">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="23" name="boardrepository">        
+      <attribute id="23" name="boardRepository">
         <position height="0" width="0" x="-110" y="-340"/>      
       </attribute>      
       <multiplicity id="24" minimum="0" maximum="1">        

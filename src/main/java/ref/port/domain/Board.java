@@ -8,12 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import ref.port.domain.common.DateAudit;
+
 /*
  * 
  * @author choiseongjun
@@ -23,25 +19,24 @@ import ref.port.domain.common.DateAudit;
 @Table(name="tbl_board")
 @Entity
 @Data
-public class board {
+public class Board {
 
-	
 	@Id
 	@GeneratedValue
 	@Column(name="brdno")
-	private long brdno;//글순서 
+	private long brdNo;//글순서
 	@Column(name="brdtitle")
-	private String brdtitle;
+	private String brdTitle;
 	@Column(name="brdmemo")
-	private String brdmemo;
+	private String brdMemo;
 	@Column(name="heart")
 	private long heart;
 	@Column(name="deleteflag")
-	private char deleteflag;
+	private char deleteFlag;
 	
 	@ManyToOne
 	@JoinColumn(name="userno")
-	private portUser user;
+	private PortUser user;
 
 
 

@@ -17,20 +17,20 @@ import lombok.Data;
 @Entity
 @Table(name="user") 
 @Data
-public class portUser {
+public class PortUser {
 
 	@Id
 	@GeneratedValue
 	@Column(name="userno")
-	private long userno;
+	private long userNo;
 	@Column(name="userid")
-	private String userid;
+	private String userId;
 	@Column(name="userpwd")
-	private String userpwd;
+	private String userPwd;
 	@Column(name="username")
-	private String username;
+	private String userName;
 	@Column(name="userimg")
-	private String userimg;
+	private String userImg;
 	@Column(name="deleteflag")
-	private char deleteflag;
+	private char deleteFlag;
 }
